@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
+body {
+  background-color: #161a1d;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  outline: none;
+  border: 0;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.loading-title {
+  font-size: 2rem;
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Search Header */
+
+.search-wrap {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+  height: 5em;
+}
+
+.title {
+  font-size: 2rem;
+  color: #fff;
+  margin-left: 1em;
+  cursor: pointer;
+}
+
+.search-form {
+  width: 70vw;
+}
+
+.search-input {
+  width: 40vw;
+  height: 5vh;
+}
+
+.search-button {
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-left: 0.5em;
+  height: 5vh;
+}
+
+/* Video List */
+
+.video-list-container {
+  grid-template-columns: repeat(5, 1fr);
+  display: grid;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.video-item {
+  height: 35vh;
+  padding: 0.7em;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.video-img {
+  width: 100%;
+}
+
+.video-title {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-top: 0.5em;
+  /* display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 10em; */
+}
+
+/* Selected Video */
+
+.selected-video-container {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  flex: 1;
+}
+
+.selected-video-player {
+  width: 70%;
+  padding: 0 2em;
+}
+
+.video-player-title {
+  color: #fff;
+  font-size: 2rem;
+  margin-top: 2em;
+}
+
+.selected-video-list-container {
+  width: 30%;
+}
+.selected-video-player iframe {
+  height: 65vh;
+  width: 100%;
+}
+
+.select-video-item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2em;
+}
+
+.select-video-img {
+  width: 40%;
+}
+
+.select-video-title {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-top: 0.5em;
+}
+
+@media (max-width: 1023px) {
+  .selected-video-container {
+    margin-top: 2em;
+    width: 100%;
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+  .selected-video-list-container {
+    width: 100%;
+    margin-left: 2em;
   }
 }
